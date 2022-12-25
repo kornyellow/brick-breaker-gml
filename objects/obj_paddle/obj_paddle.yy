@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_paddle",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_paddle",
+    "path": "sprites/spr_paddle/spr_paddle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -29,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "brick-breaker",
-    "path": "brick-breaker.yyp",
+    "name": "objects",
+    "path": "folders/objects.yy",
   },
 }

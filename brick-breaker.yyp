@@ -3,9 +3,12 @@
   "resourceVersion": "1.6",
   "name": "brick-breaker",
   "resources": [
-    {"id":{"name":"scr_ball","path":"scripts/scr_ball/scr_ball.yy",},"order":13,},
-    {"id":{"name":"obj_paddle","path":"objects/obj_paddle/obj_paddle.yy",},"order":11,},
-    {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},"order":12,},
+    {"id":{"name":"spr_paddle","path":"sprites/spr_paddle/spr_paddle.yy",},"order":0,},
+    {"id":{"name":"spr_ball","path":"sprites/spr_ball/spr_ball.yy",},"order":1,},
+    {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":2,},
+    {"id":{"name":"obj_paddle","path":"objects/obj_paddle/obj_paddle.yy",},"order":1,},
+    {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":2,},
+    {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},"order":0,},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":0,},
   ],
   "Options": [
@@ -28,7 +31,9 @@
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "Folders": [
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":10,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"rooms","folderPath":"folders/rooms.yy","order":10,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites","folderPath":"folders/sprites.yy","order":14,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"objects","folderPath":"folders/objects.yy","order":15,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

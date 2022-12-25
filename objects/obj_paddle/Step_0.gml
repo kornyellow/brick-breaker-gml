@@ -1,20 +1,32 @@
 /// @description Paddle processing
 
-var _dt = delta_time / 1000000
+if (keyboard_check_pressed(ord("R"))) {
+	game_restart()	
+}
+
+// State
+if (state == PADDLE_STATE.PADDLE_READY) {
+	if (mouse_check_button_pressed(mb_left)) {
+		state = PADDLE_STATE.PADDLE_FREE
+		
+		var _dir_x = lengthdir_x(sprite_get_width(spr_ball), image_angle-90)
+		var _dir_y = lengthdir_y(sprite_get_width(spr_ball), image_angle-90)
+		var _ball = instance_create_layer(x - _dir_x, y - _dir_y, "Ball", obj_ball)
+		_ball.direction = image_angle - 90
+		_ball.x_velocity = lengthdir_x(BALL_SPEED, _ball.direction)
+		_ball.y_velocity = lengthdir_y(BALL_SPEED, _ball.direction)
+	}
+}
 
 // Movement
-left = x
-right = x+PADDLE_WIDTH
-top = y
-bottom = y+PADDLE_HEIGHT
+recoil = lerp(recoil, 0, 0.1)
+y = ystart + recoil
 
-var _key_left = keyboard_check(vk_left) or keyboard_check(ord("A"))
-var _key_right = keyboard_check(vk_right) or keyboard_check(ord("D"))
+image_angle += (x - mouse_x) / 5
+image_angle = lerp(image_angle, 0, 0.2)
+image_angle = clamp(image_angle, -45, 45)
 
-var _move = _key_right - _key_left
-
-velocity = _move * PADDLE_SPEED
-x += velocity * _dt
+x = lerp(x, mouse_x, 0.5)
 
 // Clamp
-x = clamp(x, 0, room_width-PADDLE_WIDTH)
+x = clamp(x, sprite_width/2, room_width - sprite_width/2)

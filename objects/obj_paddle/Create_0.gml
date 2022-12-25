@@ -3,21 +3,14 @@
 window_set_fullscreen(true)
 
 // Constant
-PADDLE_SPEED = 400
-
-PADDLE_WIDTH = 96
-PADDLE_HEIGHT = 64
-
-PADDLE_X_START = room_width*0.5 - PADDLE_WIDTH*0.5
-PADDLE_Y_START = room_height-128
+enum PADDLE_STATE {
+	PADDLE_READY,
+	PADDLE_FREE,
+	PADDLE_LOCK
+}
 
 // Variables
-velocity = 0
+recoil = 0
 
-// Setup
-x = PADDLE_X_START
-y = PADDLE_Y_START
-left = x
-right = x+PADDLE_WIDTH
-top = y
-bottom = y+PADDLE_HEIGHT
+state = PADDLE_STATE.PADDLE_READY
+health = 3
