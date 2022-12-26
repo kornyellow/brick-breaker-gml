@@ -13,8 +13,8 @@ state_ready = function () {
 state_free = function () {
 	if (instance_number(obj_ball) == 0) {
 		state = state_ready
-		health -= 1
-		if (health == 0) {
+		life -= 1
+		if (life == 0) {
 			state = state_lock	
 		}
 	}
@@ -28,7 +28,7 @@ state_lock = function () {
 // Variables
 recoil = 0
 state = state_ready
-health = 3
+life = 3
 
 #region // Functions
 function movement () {

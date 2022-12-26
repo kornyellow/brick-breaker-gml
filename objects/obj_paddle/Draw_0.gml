@@ -3,8 +3,6 @@
 draw_self()
 
 // Draw ball in ready state
-show_debug_message(state)
-show_debug_message(state_ready)
 if (state == state_ready) {
 	var _dir_x = lengthdir_x(sprite_get_width(spr_ball), image_angle-90)
 	var _dir_y = lengthdir_y(sprite_get_width(spr_ball), image_angle-90)
