@@ -1,6 +1,6 @@
 /// @description Paddle initialization
 
-window_set_fullscreen(true)
+//window_set_fullscreen(true)
 
 #region // States
 state_ready = function () {
